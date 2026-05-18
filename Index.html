@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade X Biology MCQ Worksheet</title>
+<style>
+    body {
+        background-color: #000000;
+        color: #FFFF00;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 800px;
+        margin: auto;
+    }
+    h1 {
+        text-align: center;
+        border-bottom: 2px solid #FFFF00;
+        padding-bottom: 10px;
+    }
+    .question-container {
+        margin-bottom: 30px;
+        padding: 15px;
+        border: 1px solid #FFFF00;
+    }
+    .options label {
+        display: block;
+        margin: 8px 0;
+        cursor: pointer;
+        padding: 5px;
+    }
+    .options input {
+        margin-right: 10px;
+    }
+    .feedback {
+        margin-top: 10px;
+        padding: 10px;
+        font-weight: bold;
+        display: none;
+    }
+    .correct { background-color: #333300; border-left: 5px solid #00FF00; }
+    .incorrect { background-color: #330000; border-left: 5px solid #FF0000; color: #FF9999; }
+</style>
+<script>
+    function checkAnswer(questionId, isCorrect, explanation) {
+        const feedbackDiv = document.getElementById('feedback-' + questionId);
+        feedbackDiv.style.display = 'block';
+        
+        if (isCorrect) {
+            feedbackDiv.className = 'feedback correct';
+            feedbackDiv.innerHTML = "Correct!";
+        } else {
+            feedbackDiv.className = 'feedback incorrect';
+            feedbackDiv.innerHTML = "Incorrect. " + explanation;
+        }
+    }
+</script>
+</head>
+<body>
+
+    <h1>Grade X Interactive Worksheet</h1>
+
+    <div class="question-container">
+        <p><strong>1. A scientist wanted to conduct a genetic experiment on mice. He cut the tails of all the mice and made them reproduce. What will be the phenotype of the offsprings?</strong></p>
+        <div class="options">
+            <label><input type="radio" name="q1" onclick="checkAnswer(1, false, 'Acquired physical changes do not alter the DNA in germ cells, so they cannot be inherited.')"> (a) All the offsprings will be tailless.</label>
+            <label><input type="radio" name="q1" onclick="checkAnswer(1, false, 'Acquired physical changes do not alter the DNA in germ cells, so they cannot be inherited.')"> (b) There will be a mix of tailed and tailless offsprings.</label>
+            <label><input type="radio" name="q1" onclick="checkAnswer(1, true, '')"> (c) All the offsprings will have tails.</label>
+            <label><input type="radio" name="q1" onclick="checkAnswer(1, false, 'Acquired physical changes do not alter the DNA in germ cells, so they cannot be inherited.')"> (d) Tail of the offsprings cannot be predicted.</label>
+        </div>
+        <div id="feedback-1" class="feedback"></div>
+    </div>
+
+    <div class="question-container">
+        <p><strong>2. Ajay and Vijay are siblings. Ajay can roll his tongue while Vijay cannot. What is the genotype of their parents?</strong></p>
+        <div class="options">
+            <label><input type="radio" name="q2" onclick="checkAnswer(2, false, 'If both were homozygous dominant, all children would be rollers.')"> (a) Both the parents are homozygous dominant.</label>
+            <label><input type="radio" name="q2" onclick="checkAnswer(2, false, 'If both were homozygous recessive, neither parent nor Ajay could roll their tongue.')"> (b) Both the parents are homozygous recessive.</label>
+            <label><input type="radio" name="q2" onclick="checkAnswer(2, false, 'In this scenario, all children would receive at least one dominant gene and be rollers.')"> (c) One parent is homozygous dominant, and the other is homozygous recessive.</label>
+            <label><input type="radio" name="q2" onclick="checkAnswer(2, true, '')"> (d) Both the parents are heterozygous dominant.</label>
+        </div>
+        <div id="feedback-2" class="feedback"></div>
+    </div>
+
+    <div class="question-container">
+        <p><strong>3. A phase of cell division where the spindle fibres disappear is:</strong></p>
+        <div class="options">
+            <label><input type="radio" name="q3" onclick="checkAnswer(3, true, '')"> (a) Telophase</label>
+            <label><input type="radio" name="q3" onclick="checkAnswer(3, false, 'Spindle fibers are actively forming during prophase, not disappearing.')"> (b) Prophase</label>
+            <label><input type="radio" name="q3" onclick="checkAnswer(3, false, 'During metaphase, spindle fibers are fully formed and attached to chromosomes.')"> (c) Metaphase</label>
+            <label><input type="radio" name="q3" onclick="checkAnswer(3, false, 'During anaphase, spindle fibers are actively contracting to pull chromatids apart.')"> (d) Anaphase</label>
+        </div>
+        <div id="feedback-3" class="feedback"></div>
+    </div>
+    
+    <div class="question-container">
+        <p><strong>4. Duplicated chromosomes are joined at a point termed:</strong></p>
+        <div class="options">
+            <label><input type="radio" name="q4" onclick="checkAnswer(4, false, 'The centrosome is an organelle near the nucleus that organizes microtubules.')"> (a) Centrosome</label>
+            <label><input type="radio" name="q4" onclick="checkAnswer(4, true, '')"> (b) Centromere</label>
+            <label><input type="radio" name="q4" onclick="checkAnswer(4, false, 'Centrioles are cylindrical structures found inside centrosomes.')"> (c) Centriole</label>
+            <label><input type="radio" name="q4" onclick="checkAnswer(4, false, 'A chromatid is one half of the duplicated chromosome itself, not the joining point.')"> (d) Chromatid</label>
+        </div>
+        <div id="feedback-4" class="feedback"></div>
+    </div>
+
+    <div class="question-container">
+        <p><strong>5. A zygote which has Y chromosome inherited from the father will develop into a:</strong></p>
+        <div class="options">
+            <label><input type="radio" name="q5" onclick="checkAnswer(5, false, 'The mother always provides an X chromosome; the sex is determined by the father.')"> (a) Will depend on the chromosome inherited from the mother</label>
+            <label><input type="radio" name="q5" onclick="checkAnswer(5, false, 'A girl develops when an X chromosome is inherited from the father (XX).')"> (b) Girl</label>
+            <label><input type="radio" name="q5" onclick="checkAnswer(5, false, 'The presence of the Y chromosome definitively determines male sex (XY).')"> (c) Either boy or a girl</label>
+            <label><input type="radio" name="q5" onclick="checkAnswer(5, true, '')"> (d) Boy</label>
+        </div>
+        <div id="feedback-5" class="feedback"></div>
+    </div>
+
+    <div class="question-container">
+        <p><strong>6. Four friends P, Q, R and S were discussing the examples of genetic disorders. P: Colour blindness and Malaria. Q: Albinism and Cholera. R: Haemophilia and Colour blindness. S: Haemophilia and Albinism. Who gave the correct examples?</strong></p>
+        <div class="options">
+            <label><input type="radio" name="q6" onclick="checkAnswer(6, false, 'Malaria and Cholera are infectious diseases caused by pathogens, not genetic defects.')"> (a) P and Q</label>
+            <label><input type="radio" name="q6" onclick="checkAnswer(6, true, '')"> (b) R and S</label>
+            <label><input type="radio" name="q6" onclick="checkAnswer(6, false, 'Malaria (listed by P) is an infectious disease, not genetic.')"> (c) P and R</label>
+            <label><input type="radio" name="q6" onclick="checkAnswer(6, false, 'Cholera (listed by Q) is an infectious bacterial disease.')"> (d) Q and S</label>
+        </div>
+        <div id="feedback-6" class="feedback"></div>
+    </div>
+
+    <div class="question-container">
+        <p><strong>7. A male gorilla has 48 chromosomes in each of its body cells. How many chromosomes will each of the sperms have?</strong></p>
+        <div class="options">
+            <label><input type="radio" name="q7" onclick="checkAnswer(7, true, '')"> (a) 24</label>
+            <label><input type="radio" name="q7" onclick="checkAnswer(7, false, 'Sperm cells are haploid and contain half the body cell chromosome count.')"> (b) 48</label>
+            <label><input type="radio" name="q7" onclick="checkAnswer(7, false, 'Sperm cells contain exactly half the diploid number (48/2 = 24).')"> (c) 12</label>
+            <label><input type="radio" name="q7" onclick="checkAnswer(7, false, 'Sperm cells contain exactly half the diploid number (48/2 = 24).')"> (d) 16</label>
+        </div>
+        <div id="feedback-7" class="feedback"></div>
+    </div>
+</body>
+</html>
